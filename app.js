@@ -36,6 +36,10 @@ app.use("/api/v1/softwareApplication", softwareApplicationRouter);
 app.use("/api/v1/project", projectRouter);
 app.use("/api/v1/skill", skillRouter);
 
+app.get("/", (req,res) => {
+  res.send("server")
+} )
+
 connectDB();
 app.use(errorMiddleware);
 
